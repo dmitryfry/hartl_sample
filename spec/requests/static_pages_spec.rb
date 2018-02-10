@@ -1,6 +1,9 @@
 require "rails_helper"
 
 RSpec.feature "Static pages", :type => :feature do
+
+  let(:base_title) { "Ruby on Rails Tutorial Sample App" }
+
   describe "Home page" do
 
     it "should have the content 'Sample App'" do
@@ -10,7 +13,7 @@ RSpec.feature "Static pages", :type => :feature do
 
     it "should have the title 'Home'" do
       visit '/static_pages/home'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
+      expect(page).to have_title("#{base_title} | Home")
     end
   end
 
@@ -23,7 +26,7 @@ RSpec.feature "Static pages", :type => :feature do
 
     it "should have the title 'Help'" do
       visit '/static_pages/help'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
+      expect(page).to have_title("#{base_title} | Help")
     end
   end
 
