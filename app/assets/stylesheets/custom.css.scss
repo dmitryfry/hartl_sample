@@ -1,0 +1,15 @@
+@import "bootstrap";
+
+
+body {
+  padding-top: 140px;
+}
+.rails-logo {
+  width: 10em;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
